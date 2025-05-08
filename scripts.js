@@ -109,7 +109,7 @@ function printlog() {
         spreadsheetval.push("No Clasp");
     }
 
-    spreadsheetval.push(formatDate(today));
+    spreadsheetval.push(`${today.getDate()}/${today.getMonth()+1}/${today.getFullYear()}`);
 
 
     if (document.getElementById("checkbox-award").checked) {
