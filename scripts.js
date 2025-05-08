@@ -1,14 +1,10 @@
 const today = new Date();
-function formatDate(inst) {
-    return `${date}/${month}/${year}`;
-}
-
 document.querySelectorAll('.date-item').forEach(p => {
     const monthsBack = parseInt(p.getAttribute('data-offset'), 10);
     const pastDate = new Date(today);
     pastDate.setMonth(pastDate.getMonth() - monthsBack);
 
-    const formatted =  `${pastDate.getDate()}/${pastDate.getMonth()+1}/${pastDate.getFullYear}`;
+    const formatted =  `${pastDate.getDate()}/${pastDate.getMonth()+1}/${pastDate.getFullYear()}`;
     p.textContent += ` ${formatted}`;
 });
 
