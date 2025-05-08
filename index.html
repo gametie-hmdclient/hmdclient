@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <title>HMD Client</title>
+    </head>
+    <body>
+        <div class="datesdiv">
+            <h2>Service Medal Dates</h2>
+            <p class="date-item" data-offset="3">3 Months Before Today:</p>
+            <p class="date-item" data-offset="6">6 Months Before Today:</p>
+            <p class="date-item" data-offset="9">9 Months Before Today:</p>
+            <p class="date-item" data-offset="12">12 Months Before Today:</p>
+            
+            <h2>Veteran Cross Dates</h2>
+            <p class="date-item" data-offset="18">18 Months Before Today:</p>
+            <p class="date-item" data-offset="24">24 Months Before Today:</p>
+            <p class="date-item" data-offset="30">30 Months Before Today:</p>
+            <p class="date-item" data-offset="36">36 Months Before Today:</p>
+            
+
+        </div>
+        <section>
+            <div class="datesdiv">
+                <h2>Honour Log Generator</h2>
+                <form id="logform">
+
+                    <label for="usernameInput">
+                        Username: <input type="text" id="username-input" name="usernameInput">    
+                    </label> <br><br>
+
+                    <label for="linkInput">
+                        Roblox Profile Link: <input type="text" id="link-input" name="linkInput">    
+                    </label> <br><br>
+
+                    <div class="radiogroup">
+                        <label for="medal-asm">
+                            <input type="radio" name="medalRadio" id="medal-asm" value="Army Service Medal">
+                            Service Medal
+                        </label>
+                        <label for="medal-avc">
+                            <input type="radio" name="medalRadio" id="medal-avc" value="Army Veteran Cross">
+                            Veteran Cross
+                        </label>
+                        <label for="medal-rec">
+                            <input type="radio" name="medalRadio" id="medal-rec" value="Army Recruitment Medal">
+                            Recruitment
+                        </label>
+                        <label for="medal-wag">
+                            <input type="radio" name="medalRadio" id="medal-wag" value="Wagram Campaign Medal">
+                            Wagram
+                        </label>
+                        <label for="medal-wat">
+                            <input type="radio" name="medalRadio" id="medal-wat" value="Waterloo Campaign Medal">       
+                            Waterloo
+                        </label>
+                        <label for="medal-ibe">
+                            <input type="radio" name="medalRadio" id="medal-ibe" value="Iberian Campaign Medal">
+                            Iberian
+                        </label>
+                        <label for="medal-wal">
+                            <input type="radio" name="medalRadio" id="medal-wal" value="Walcheren Campaign Medal">
+                            Walcheren
+                        </label>
+                    </div> <br><br>
+
+                    <div class="radiogroup">
+                        <label for="clasp0">
+                            <input type="radio" name="claspRadio" id="clasp0" value="No Clasp">
+                            No Clasp
+                        </label>
+                        <label for="clasp1">
+                            <input type="radio" name="claspRadio" id="clasp1" value="Clasp 1">
+                            Clasp 1
+                        </label>
+                        <label for="clasp2">
+                            <input type="radio" name="claspRadio" id="clasp2" value="Clasp 2">
+                            Clasp 2
+                        </label>
+                        <label for="clasp3">
+                            <input type="radio" name="claspRadio" id="clasp3" value="Clasp 3">
+                            Clasp 3
+                        </label>
+                    </div> <br><br>
+
+                    <label for="awardedCheckbox">
+                        Awarded: <input type="checkbox" id="checkbox-award" name="awardedCheckbox">
+                    </label> <br><br>
+                    
+    
+                    <label for="reasonInput">
+                        Reason: <input type="text" id="reason-input" name="reasonInput">    
+                    </label> <br><br>
+
+
+                    <input type="submit" value="Submit">
+                    <input type="button" value="Clear" id="clearbutton">
+
+                    <h3>Output:</h3>
+                    <textarea id="logarea"></textarea>
+                </form>
+            </div>
+            <br>
+            <br>
+            
+            <div class="datesdiv">
+                <button id="copyspreadsheet-button">
+                    <h2>Quick Spreadsheet Copy</h2>
+                </button>
+            </div>
+        </section>
+        
+
+
+    </body>
+    <script src="scripts.js"></script>
+</html>
