@@ -1,12 +1,23 @@
+function writespan(parent, text) {
+    var span = document.createElement("span");
+    span.classList.add("dates");
+    span.innerText = text;
+    parent.appendChild(span);
+};
+
 const today = new Date();
 document.querySelectorAll('.date-item').forEach(p => {
     const monthsBack = parseInt(p.getAttribute('data-offset'), 10);
     const pastDate = new Date(today);
     pastDate.setMonth(pastDate.getMonth() - monthsBack);
-
     const formatted =  `${pastDate.getDate()}/${pastDate.getMonth()+1}/${pastDate.getFullYear()}`;
-    p.textContent += ` ${formatted}`;
+    writespan(p, formatted)
 });
+
+
+document.getElementById("logarea").style.width =
+  document.getElementById("sectionID").offsetWidth + 'px';
+
 
 
 logArray = ["Roblox Username: ","Roblox Profile link: ","Medal Applying For: ", "Status: "]
@@ -125,7 +136,7 @@ function printlog() {
 
     const spreadsheet_final = spreadsheetval.join("\t");
 
-    document.getElementById("copyspreadsheet-button").addEventListener("click", function() {
+    document.getElementById("copyspreadsheet-button").addEventListener("click", () => {
         navigator.clipboard.writeText(spreadsheet_final);
         spreadsheetval = []
     });

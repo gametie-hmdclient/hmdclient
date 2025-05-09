@@ -20,11 +20,6 @@ body {
     width: fit-content;
 }
 
-textarea {
-    width: 20vw;
-    height: 12.5vh;
-}
-
 .radiogroup {
     display: flex;
     gap: 15px;
@@ -46,5 +41,33 @@ textarea {
 
 #copyspreadsheet-button {
     all: unset;
+    cursor: pointer;
+}
+
+.dates {
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    background-color: rgb(187, 187, 187);
+    padding: 2.5px;
+    border-radius: 5px;
+}
+
+#logarea {
+    border-radius: 20px;
+    padding-left: 15px;
+    padding-top: 15px;
+    height: 15vh;
+    font-size: 17.5px;
+}
+
+.buttonlog {
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px rgb(138, 138, 138);
+    background-color: rgb(216, 216, 216);
+    border-style: solid;
     cursor: pointer;
 }
