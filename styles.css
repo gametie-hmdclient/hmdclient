@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
+/* 
+BACKGROUND: 246, 255, 248
+SECTION PANES: 234, 244, 244
+204, 227, 222
+BUTTON BACKGROUNDS: 164, 195, 178
+BORDERS: 107, 144, 128
+*/
 * {
     font-family: "Source Sans 3", sans-serif;
     font-optical-sizing: auto;
@@ -7,19 +14,32 @@
     font-style: normal;
 }
 
-body {
+body {background-color: rgb(246, 255, 248);}
+
+/* mainSection contains all content on the page viewable by default*/
+.mainSection {
     display: flex;
     flex-direction: row;
     gap: 25px;
 }
 
-.datesdiv {
-    background-color: rgb(216, 216, 216);
+/* Targets both main divs*/
+.maindiv {
+    background-color: rgb(234, 244, 244);
     border-radius: 20px;
     padding: 10px;
+
+    box-shadow: 1px 1px 15px rgb(107, 144, 128);
+    gap: 25px;
+    display: inline-block;
+}
+/* Targets the div on the right*/
+#leftdiv {
     width: fit-content;
 }
 
+
+/* Targets both groups of radio buttons */
 .radiogroup {
     display: flex;
     gap: 15px;
@@ -30,29 +50,60 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 4px;
-    border: 1px rgb(138, 138, 138);
+    border: 1px rgb(107, 144, 128);
     border-style: solid;
     border-radius: 10px;
 }
 
-#checkbox-award {
-    transform: scale(1.25);
-}
+.checkbox-award { transform: scale(1.25);}
 
-#copyspreadsheet-button {
+button {
     all: unset;
     cursor: pointer;
-    background-color: rgb(216, 216, 216);
+}
+
+/* Targets the button to copy spreadsheet format to clipboard*/
+
+.spreadsheet-div {
+    background-color: rgb(234, 244, 244);
+    box-shadow: 1px 1px 15px rgb(107, 144, 128);
     border-radius: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
-#copyspreadsheet-button h2 {
-    font-family: "Source Code Pro", monospace;  
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal
+
+.copyspreadsheet-button {
+    background-color: rgb(107, 144, 128);
+    color: rgb(246, 255, 248);
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    height: 50px;
+    width: 90%;
 }
+table {
+    border-collapse: collapse;
+    border-radius: 10px;
+    border-style: hidden; /* hide standard table (collapsed) border */
+    box-shadow: 0 0 0 1px rgb(164, 195, 178); /* this draws the table border  */    
+    text-align: center;
+}
+td, th {
+    border: 1px solid rgb(164, 195, 178);
+    padding: 5px;
+    padding-right: 25px;
+    height: 15px;
+}
+
+
+
+
+
+
 
 .dates {
     font-family: "Source Code Pro", monospace;
@@ -66,10 +117,10 @@ body {
 
 #logarea {
     border-radius: 20px;
-    padding-left: 15px;
-    padding-top: 15px;
-    height: 15vh;
-    font-size: 17.5px;
+    padding: 10px;
+    height: 100px;
+    font-size: 15px;
+    resize: none;
 }
 
 .buttonlog {
@@ -82,22 +133,35 @@ body {
     cursor: pointer;
 }
 
-.bottom-section {
-    display: flex;
-    flex-direction: row;
-    gap: 25px;
-}
 .settings-div {
-    width: 100px;
-    height: 100px;
-    background-color: rgb(216, 216, 216);
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgb(138, 138, 138);
+    position:fixed;
+    top: 0;
+    right: 0;
+    padding: 10px;
+}
+.settings-icon {filter: invert(61%) sepia(4%) saturate(2274%) hue-rotate(102deg) brightness(87%) contrast(79%);}
+
+
+input {
+    border-radius: 10px;
+    border-style: solid;
+    border-color:rgb(138, 138, 138);
+    padding: 5px;
+    border-width: 0.5px;
 }
 
-.settingssvg {
-    filter: invert(75%) sepia(80%) saturate(0%) hue-rotate(175deg) brightness(90%) contrast(81%);
+.settings {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(180, 180, 180);
+    width: 35vw;
+    height: 60vh;
+    border-radius: 20px;
+    box-shadow: 1px 1px 15px rgb(107, 144, 128);
+    padding: 7.5px;
+    display: none;
+
 }
